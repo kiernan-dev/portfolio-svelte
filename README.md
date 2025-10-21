@@ -24,28 +24,31 @@ A modern, interactive portfolio website built with SvelteKit and TypeScript.
 
 ### Prerequisites
 
-- Node.js 18+ 
+- Node.js 18+
 - pnpm (recommended) or npm
 
 ### Installation
 
-1. Clone the repository
+- Clone the repository
+
 ```bash
 git clone <repository-url>
 cd Portfolio-svelte
 ```
 
-2. Install dependencies
+- Install dependencies
+
 ```bash
 pnpm install
 ```
 
-3. Start the development server
+- Start the development server
+
 ```bash
 pnpm dev
 ```
 
-4. Open [http://localhost:5173](http://localhost:5173) in your browser
+- Open [http://localhost:5173](http://localhost:5173) in your browser
 
 ## Available Scripts
 
@@ -80,7 +83,3 @@ pnpm build
 ```
 
 The built files will be in the `build/` directory, ready to be deployed to any static hosting service.
-
-## License
-
-This project is private and not licensed for public use.
