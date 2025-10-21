@@ -13,6 +13,7 @@
     "@sveltejs/adapter-auto": "^3.0.0",
     "@sveltejs/kit": "^2.0.0",
     "@sveltejs/vite-plugin-svelte": "^4.0.0",
+    "@types/node": "^24.9.1",
     "svelte": "^5.0.0",
     "svelte-check": "^4.0.0",
     "typescript": "^5.0.0",
@@ -20,9 +21,9 @@
   },
   "type": "module",
   "dependencies": {
-    "p5": "^1.7.0",
     "@types/p5": "^1.7.0",
-    "aos": "^2.3.4"
+    "aos": "^2.3.4",
+    "p5": "^1.7.0"
   },
   "packageManager": "pnpm@10.12.1"
 }

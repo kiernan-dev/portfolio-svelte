@@ -3,6 +3,7 @@ import { defineConfig } from 'vite';
 
 export default defineConfig({
 	plugins: [sveltekit()],
+	base: process.env.NODE_ENV === 'production' ? '/static/' : '/',
 	server: {
 		fs: {
 			allow: ['..']
