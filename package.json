@@ -26,7 +26,8 @@
   "dependencies": {
     "@types/p5": "^1.7.0",
     "aos": "^2.3.4",
-    "p5": "^1.7.0"
+    "p5": "^1.7.0",
+    "svelte-french-toast": "^1.2.0"
   },
   "packageManager": "pnpm@10.12.1"
 }

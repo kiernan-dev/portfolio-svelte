@@ -2,6 +2,7 @@
 	import '../app.css';
 	import { onMount } from 'svelte';
 	import { themeStore, audioStore } from '$lib/stores';
+	import { Toaster } from 'svelte-french-toast';
 
 	onMount(() => {
 		// Load saved theme
@@ -14,6 +15,7 @@
 
 <div class="app">
 	<slot />
+	<Toaster />
 </div>
 
 <style>

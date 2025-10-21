@@ -1,4 +1,6 @@
 <script lang="ts">
+	import toast from 'svelte-french-toast';
+
 	let formData = {
 		name: '',
 		email: '',
@@ -6,12 +8,10 @@
 	};
 
 	let isSubmitting = false;
-	let submitMessage = '';
 
 	async function handleSubmit(event: Event) {
 		event.preventDefault();
 		isSubmitting = true;
-		submitMessage = '';
 
 		try {
 			const response = await fetch('/api/contact', {
@@ -23,13 +23,13 @@
 			});
 
 			if (response.ok) {
-				submitMessage = 'Message sent successfully!';
+				toast.success('Message sent successfully!');
 				formData = { name: '', email: '', message: '' };
 			} else {
-				submitMessage = 'Failed to send message. Please try again.';
+				toast.error('Failed to send message. Please try again.');
 			}
 		} catch (error) {
-			submitMessage = 'An error occurred. Please try again.';
+			toast.error('An error occurred. Please try again.');
 		} finally {
 			isSubmitting = false;
 		}
@@ -88,11 +88,6 @@
 					<button type="submit" class="contact-submit-btn" disabled={isSubmitting}>
 						<span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
 					</button>
-					{#if submitMessage}
-						<div class="submit-message" class:success={submitMessage.includes('successfully')}>
-							{submitMessage}
-						</div>
-					{/if}
 				</form>
 			</div>
 			<div class="contact-tagline" data-aos="fade-up" data-aos-delay="600">
