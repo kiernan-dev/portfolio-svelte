@@ -60,7 +60,7 @@ pnpm dev
 
 ## Project Structure
 
-```
+```text
 src/
 ├── lib/
 │   ├── components/     # Reusable Svelte components
