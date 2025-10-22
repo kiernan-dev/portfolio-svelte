@@ -14,7 +14,7 @@
 				{ src: 'src/png/icons/anthropic.png', alt: 'anthropic logo' }
 			],
 			githubUrl: 'https://github.com/kiernan-dev/venture-map.git',
-			liveUrl: 'https://kiernan.studio/venturemap',
+			liveUrl: 'https://venturemap.kiernan.studio',
 			imageUrl: 'src/webp/proj-venmap.webp',
 			isFirstProject: true
 		},
@@ -31,7 +31,7 @@
 				{ src: 'src/png/icons/react-router.png', alt: 'react router logo' }
 			],
 			githubUrl: 'https://github.com/kiernan-dev/keygen.git',
-			liveUrl: 'https://kiernan.studio/keygen',
+			liveUrl: 'https://keygen.kiernan.studio',
 			imageUrl: 'src/webp/proj-keygen.webp',
 			isFirstProject: false
 		},
@@ -45,7 +45,7 @@
 				{ src: 'src/png/icons/js.png', alt: 'javascript logo' }
 			],
 			githubUrl: 'https://github.com/kiernan-dev/cardography.git',
-			liveUrl: 'https://kiernan.studio/cardography',
+			liveUrl: 'https://cardography.kiernan.studio',
 			imageUrl: 'src/webp/proj-cardography.webp',
 			isFirstProject: false
 		},
@@ -61,7 +61,7 @@
 				{ src: 'src/png/icons/react-router.png', alt: 'react router logo' }
 			],
 			githubUrl: 'https://github.com/kiernan-dev/colorstack.git',
-			liveUrl: 'https://kiernan.studio/colorstack',
+			liveUrl: 'https://colorstack.kiernan.studio',
 			imageUrl: 'src/webp/proj-colorstack.webp',
 			isFirstProject: false
 		},
@@ -78,7 +78,7 @@
 				{ src: 'src/png/icons/pnpm.png', alt: 'pnpm logo' }
 			],
 			githubUrl: 'https://github.com/kiernan-dev/memorium.git',
-			liveUrl: 'https://kiernan.studio/memorium',
+			liveUrl: 'https://memorium.kiernan.studio',
 			imageUrl: 'src/webp/proj-memorium.webp',
 			isFirstProject: false
 		},
@@ -94,7 +94,7 @@
 				{ src: 'src/png/icons/pnpm.png', alt: 'pnpm logo' }
 			],
 			githubUrl: 'https://github.com/kiernan-dev/docker-pimp.git',
-			liveUrl: 'https://kiernan.studio/dockerpimp',
+			liveUrl: 'https://dockerpimp.kiernan.studio',
 			imageUrl: 'src/webp/proj-dockerpimp.webp',
 			isFirstProject: false
 		},
@@ -111,7 +111,7 @@
 				{ src: 'src/png/icons/pnpm.png', alt: 'pnpm logo' }
 			],
 			githubUrl: 'https://github.com/kiernan-dev/healthwise.git',
-			liveUrl: 'https://kiernan.studio/healthwise',
+			liveUrl: 'https://healthwise.kiernan.studio',
 			imageUrl: 'src/webp/proj-healthwise.webp',
 			isFirstProject: false
 		},
@@ -128,7 +128,7 @@
 				{ src: 'src/png/icons/pnpm.png', alt: 'pnpm logo' }
 			],
 			githubUrl: 'https://github.com/kiernan-dev/storybook.git',
-			liveUrl: 'https://kiernan.studio/storybook',
+			liveUrl: 'https://storybook.kiernan.studio',
 			imageUrl: 'src/webp/proj-storybook.webp',
 			isFirstProject: false
 		}
