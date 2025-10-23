@@ -14,7 +14,7 @@
 				{ src: 'src/png/icons/anthropic.png', alt: 'anthropic logo' }
 			],
 			githubUrl: 'https://github.com/kiernan-dev/venture-map.git',
-			liveUrl: 'https://venturemap.kiernan.studio',
+			liveUrl: 'https://venmap.kiernan.studio',
 			imageUrl: 'src/webp/proj-venmap.webp',
 			isFirstProject: true
 		},
