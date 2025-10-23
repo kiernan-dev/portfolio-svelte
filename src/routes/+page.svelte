@@ -50,12 +50,12 @@
 		}
 
 		// Throttled scroll handler
-		let scrollTimeout: number;
+		let scrollTimeout: ReturnType<typeof setTimeout> | null = null;
 		const throttledScroll = () => {
 			if (!scrollTimeout) {
 				scrollTimeout = setTimeout(() => {
 					handleScroll();
-					scrollTimeout = 0;
+					scrollTimeout = null;
 				}, 16);
 			}
 		};

@@ -3,6 +3,7 @@
 	import { themeStore, audioStore } from '$lib/stores';
 	import AudioVisualizer from './AudioVisualizer.svelte';
 	import SettingsPanel from './SettingsPanel.svelte';
+	import AOS from 'aos';
 
 	let themeValue = 'dark';
 	let audioValue = { isPlaying: false, currentTrack: '/src/mp3/infinite-canvas.mp3', volume: 1 };
@@ -12,9 +13,7 @@
 
 	onMount(() => {
 		// Initialize AOS animations
-		if (typeof AOS !== 'undefined') {
-			AOS.init();
-		}
+		AOS.init();
 	});
 
 	function handleEmailClick() {
