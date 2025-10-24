@@ -30,11 +30,7 @@
 	
 	<div class="text-content">
 		<article id="hello-friend" data-aos="fade-up" data-aos-delay="0">
-			<p class="jello">H</p>
-			<p class="jello">e</p>
-			<p class="jello">l</p>
-			<p class="jello">l</p>
-			<p class="jello">o</p>
+			<p class="jello">Hello</p>
 			<p class="jello">(</p>
 			<p class="jello">)</p>
 			<p class="jello">;</p>
@@ -52,22 +48,13 @@
 			<p class="jello">e</p>
 			<p class="jello">n</p>
 			&nbsp;
-			<p class="jello">K</p>
-			<p class="jello">i</p>
-			<p class="jello">e</p>
-			<p class="jello">r</p>
-			<p class="jello">n</p>
-			<p class="jello">a</p>
-			<p class="jello">n</p>
+			<p class="jello">Kiernan</p>
 			<p class="jello">.</p>
 		</article>
 
 		<article id="work" data-aos="fade-up" data-aos-delay="400">
 			<div>
-				<p class="jello">F</p>
-				<p class="jello">u</p>
-				<p class="jello">l</p>
-				<p class="jello">l</p>
+				<p class="jello">Full</p>
 				<p class="jello">-</p>
 				<p class="jello">S</p>
 				<p class="jello">t</p>
@@ -76,9 +63,7 @@
 				<p class="jello">k</p>
 			</div>
 			<div>
-				<p class="jello">D</p>
-				<p class="jello">e</p>
-				<p class="jello">v</p>
+				<p class="jello">Dev</p>
 				<p class="jello">e</p>
 				<p class="jello">l</p>
 				<p class="jello">o</p>

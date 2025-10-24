@@ -1928,7 +1928,7 @@ footer {
     /* Visualizer positioning for medium mobile */
     #p5-visualizer-container {
         top: 25% !important;
-        left: 80% !important;
+        left: 85% !important;
         transform: translate(-50%, -50%) scale(0.8);
     }
     

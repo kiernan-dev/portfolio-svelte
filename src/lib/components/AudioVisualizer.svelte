@@ -319,13 +319,13 @@
 <div 
 	id="p5-visualizer-container" 
 	bind:this={visualizerContainer}
-	style="position: absolute; top: 33%; left: 80%; transform: translate(-50%, -50%); z-index: 5;"
+	style="position: absolute; top: 25%; left: 85%; transform: translate(-50%, -50%); z-index: 5;"
 ></div>
 
 <!-- Play/pause button overlay -->
 <button 
 	id="visualizer-play-pause" 
-	style="position: absolute; top: 33%; left: 80%; transform: translate(-50%, -50%); z-index: 999; cursor: pointer; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; pointer-events: auto; background: rgba(0,0,0,0.3); border-radius: 50%; border: none;"
+	style="position: absolute; top: 25%; left: 85%; transform: translate(-50%, -50%); z-index: 999; cursor: pointer; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; pointer-events: auto; background: rgba(0,0,0,0.3); border-radius: 50%; border: none;"
 	on:click={togglePlayPause}
 	aria-label="Play/pause audio"
 >

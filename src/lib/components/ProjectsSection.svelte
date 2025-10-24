@@ -231,4 +231,21 @@
 		gap: 50px;
 		padding: 50px;
 	}
+
+	.project-box-wrapper {
+		perspective: 1000px !important;
+		transition: transform 0.3s ease !important;
+		transform-style: preserve-3d !important;
+	}
+
+	.project-box-wrapper:hover {
+		transform: rotateX(5deg) rotateY(-5deg) scale(1.02) !important;
+	}
+
+	.project-box-wrapper:hover .project-box {
+		filter: brightness(1.1);
+		box-shadow: 
+			0 20px 40px rgba(0, 0, 0, 0.3),
+			0 0 20px rgba(113, 203, 255, 0.1);
+	}
 </style>
