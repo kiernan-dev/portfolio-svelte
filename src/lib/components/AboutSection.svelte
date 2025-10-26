@@ -15,7 +15,7 @@
 				<p>My career has spanned diverse challenges: crafting web solutions for local businesses, designing 
 					high-impact digital experiences for Fortune 500 brands, modernizing legacy legal systems with strict 
 					chain-of-custody compliance for trial preparation, and building HIPAA-compliant applications for 
-					pharmaceutical clients. Each role has deepened my ability to create secure, scalable software 
+					pharmaceutical clients—just to name a few. Each role has strengthened my ability to create secure, scalable software 
 					that balances technical rigor with real-world needs.</p>
 				<p>I've come to value the lessons learned from every setback, whether it was an application that failed 
 					to scale, an accessibility audit revealing critical gaps, or a deployment error affecting mission-critical 
