@@ -140,12 +140,15 @@
 
 	.logo {
 		width: 10%;
+		min-width: 80px;
 		height: 100%;
 		flex-direction: column;
 		align-items: center;
 		justify-content: space-between;
 		user-select: none;
-		overflow: hidden;
+		overflow: visible;
+		z-index: 1000;
+		flex-shrink: 0;
 	}
 
 	.logo-top {
@@ -198,6 +201,17 @@
 
 	@media screen and (max-width: 685px) {
 		.navbar-tabs-ul {
+			display: none;
+		}
+		
+		.navbar {
+			background-image: none;
+			background-color: transparent;
+			border: none;
+			backdrop-filter: none;
+		}
+		
+		.logo {
 			display: none;
 		}
 	}

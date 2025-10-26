@@ -331,7 +331,7 @@
 	@media screen and (max-width: 685px) {
 		.text-content {
 			width: 95%;
-			padding: 0 10px;
+			padding: 0 20px;
 		}
 
 		#name, #work {
@@ -344,11 +344,51 @@
 		}
 	}
 
+	@media screen and (max-width: 768px) {
+		.letsTalkBtn {
+			display: none;
+		}
+		
+		.resume-btn {
+			width: 100%;
+			max-width: 300px;
+			height: 50px;
+			border-radius: 12px;
+			margin: 0;
+			background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+			justify-content: center;
+			font-size: 1.6rem;
+			font-weight: 600;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+		}
+		
+		.resume-btn .sign {
+			width: auto;
+			padding-left: 0;
+			margin-right: 10px;
+		}
+		
+		.resume-btn .text {
+			position: static;
+			opacity: 1;
+			width: auto;
+			padding-right: 0;
+			color: #fff;
+		}
+		
+		.resume-btn:hover {
+			width: 100%;
+			max-width: 300px;
+			border-radius: 12px;
+		}
+	}
+
 	@media screen and (max-width: 580px) {
 		.text-content {
 			width: 100%;
 			max-width: 100%;
-			padding: 0;
+			padding: 0 20px;
 			align-items: flex-start;
 			justify-content: center;
 		}

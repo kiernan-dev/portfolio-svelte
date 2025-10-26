@@ -1146,7 +1146,7 @@ footer {
     justify-content: center;
     align-items: center;
     gap: 50px;
-    padding: 50px
+    padding: 50px 0
 }
 
 .cta:hover:before,
@@ -2238,7 +2238,7 @@ footer {
         padding: 100px 0 20px 0;
     }
 
-    .project-boxes-div { padding: 50px 10px; }
+    .project-boxes-div { padding: 30px 10px; }
 
     .contact-tagline article {
         font-size: 2.2rem;

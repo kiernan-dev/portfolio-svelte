@@ -229,7 +229,7 @@
 		justify-content: center;
 		align-items: center;
 		gap: 50px;
-		padding: 50px;
+		padding: 50px 0;
 	}
 
 	.project-box-wrapper {
@@ -247,5 +247,12 @@
 		box-shadow: 
 			0 20px 40px rgba(0, 0, 0, 0.3),
 			0 0 20px rgba(113, 203, 255, 0.1);
+	}
+
+	/* Mobile styles */
+	@media screen and (max-width: 875px) {
+		.project-boxes-div {
+			padding: 30px 0;
+		}
 	}
 </style>
