@@ -7,13 +7,48 @@
 
 	let themeValue = 'dark';
 	let audioValue = { isPlaying: false, currentTrack: '/src/mp3/infinite-canvas.mp3', volume: 1 };
+	let showScrollArrow = true;
 
 	themeStore.subscribe(value => { themeValue = value; });
 	audioStore.subscribe(value => { audioValue = value; });
 
 	onMount(() => {
-		// Initialize AOS animations
-		AOS.init();
+		// Initialize AOS animations with mobile-friendly settings
+		AOS.init({
+			duration: 800,
+			easing: 'ease-out',
+			once: true,
+			offset: 50,
+			disable: false,
+			startEvent: 'DOMContentLoaded',
+			initClassName: 'aos-init',
+			animatedClassName: 'aos-animate',
+			useClassNames: false,
+			disableMutationObserver: false,
+			debounceDelay: 50,
+			throttleDelay: 99,
+		});
+
+		// Handle scroll arrow visibility
+		const handleScroll = () => {
+			const heroSection = document.getElementById('home');
+			const aboutSection = document.getElementById('about');
+			
+			if (heroSection && aboutSection) {
+				const heroRect = heroSection.getBoundingClientRect();
+				const aboutRect = aboutSection.getBoundingClientRect();
+				
+				// Show arrow when hero is visible, hide when about section comes into view
+				showScrollArrow = heroRect.bottom > window.innerHeight * 0.3 && aboutRect.top > window.innerHeight * 0.5;
+			}
+		};
+
+		window.addEventListener('scroll', handleScroll);
+		handleScroll(); // Initial check
+
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+		};
 	});
 
 	function handleEmailClick() {
@@ -23,13 +58,23 @@
 	function openResume() {
 		window.open('/kiernan-resume-2025-r.html', '_blank');
 	}
+
+	function scrollToAbout() {
+		const aboutSection = document.getElementById('about');
+		if (aboutSection) {
+			aboutSection.scrollIntoView({
+				behavior: 'smooth',
+				block: 'start'
+			});
+		}
+	}
 </script>
 
 <section class="landing-page-container" id="home">
 	<AudioVisualizer />
 	
 	<div class="text-content">
-		<article id="hello-friend" data-aos="fade-up" data-aos-delay="0">
+		<article id="hello-friend" class="hero-content">
 			<p class="jello">Hello</p>
 			<p class="jello">(</p>
 			<p class="jello">)</p>
@@ -40,7 +85,7 @@
 			<p class="jello">m</p>
 		</article>
 		
-		<article id="name" data-aos="fade-up" data-aos-delay="200">
+		<article id="name" class="hero-content">
 			<p class="jello">S</p>
 			<p class="jello">t</p>
 			<p class="jello">e</p>
@@ -52,7 +97,7 @@
 			<p class="jello">.</p>
 		</article>
 
-		<article id="work" data-aos="fade-up" data-aos-delay="400">
+		<article id="work" class="hero-content">
 			<div>
 				<p class="jello">Full</p>
 				<p class="jello">-</p>
@@ -73,13 +118,13 @@
 			</div>
 		</article>
 		
-		<p id="info-para" data-aos="fade-up" data-aos-delay="600">
+		<p id="info-para" class="hero-content">
 			Senior JavaScript Engineer who's been crafting web applications for 20+ years. From Fortune 500 brands 
 			to innovative startups. My goal is to build products that align with genuine user needs and make a tangible 
 			difference in how people interact with technology.
 		</p>
 		
-		<div class="contact-btn-div" data-aos="fade-up" data-aos-delay="800">
+		<div class="contact-btn-div hero-content">
 			<!-- svelte-ignore a11y-click-events-have-key-events -->
 			<!-- svelte-ignore a11y-interactive-supports-focus -->
 			<div tabindex="-1" on:click={handleEmailClick} role="button">
@@ -102,6 +147,17 @@
 			<SettingsPanel />
 		</div>
 	</div>
+	
+	<!-- Mobile Scroll Arrow -->
+	{#if showScrollArrow}
+		<div class="scroll-arrow-container">
+			<button class="scroll-arrow" on:click={scrollToAbout} aria-label="Scroll to about section">
+				<svg viewBox="0 0 24 24" width="24" height="24">
+					<path d="M7 10l5 5 5-5z" fill="currentColor"/>
+				</svg>
+			</button>
+		</div>
+	{/if}
 </section>
 
 <style>
@@ -327,8 +383,63 @@
 		transform: translate(2px, 2px);
 	}
 
+	.scroll-arrow-container {
+		display: none;
+		position: fixed;
+		bottom: 30px;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: 1000;
+	}
+
+	.scroll-arrow {
+		background: rgba(255, 255, 255, 0.1);
+		border: 2px solid rgba(255, 255, 255, 0.3);
+		border-radius: 50%;
+		width: 50px;
+		height: 50px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		backdrop-filter: blur(10px);
+		animation: bounce 2s infinite;
+	}
+
+	.scroll-arrow:hover {
+		background: rgba(255, 255, 255, 0.2);
+		border-color: rgba(255, 255, 255, 0.5);
+		transform: translateY(-3px);
+	}
+
+	.scroll-arrow svg {
+		color: #fff;
+		transition: transform 0.3s ease;
+	}
+
+	.scroll-arrow:hover svg {
+		transform: translateY(2px);
+	}
+
+	@keyframes bounce {
+		0%, 20%, 50%, 80%, 100% {
+			transform: translateY(0);
+		}
+		40% {
+			transform: translateY(-10px);
+		}
+		60% {
+			transform: translateY(-5px);
+		}
+	}
+
 	/* Mobile styles */
 	@media screen and (max-width: 685px) {
+		.landing-page-container {
+			padding-top: 20rem;
+		}
+		
 		.text-content {
 			width: 95%;
 			padding: 0 20px;
@@ -385,6 +496,15 @@
 	}
 
 	@media screen and (max-width: 580px) {
+		.scroll-arrow-container {
+			display: block;
+		}
+		
+		.hero-content {
+			display: flex !important;
+			visibility: visible !important;
+		}
+		
 		.text-content {
 			width: 100%;
 			max-width: 100%;

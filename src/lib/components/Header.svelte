@@ -200,18 +200,7 @@
 	}
 
 	@media screen and (max-width: 685px) {
-		.navbar-tabs-ul {
-			display: none;
-		}
-		
-		.navbar {
-			background-image: none;
-			background-color: transparent;
-			border: none;
-			backdrop-filter: none;
-		}
-		
-		.logo {
+		header {
 			display: none;
 		}
 	}
